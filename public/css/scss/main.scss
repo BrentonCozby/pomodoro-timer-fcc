@@ -1,0 +1,83 @@
+@import "_normalize";
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+    transition: all .5s;
+}
+
+.app {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.fieldset {
+    display: inline-block;
+    border: none;
+
+    &.work {
+        margin-right: 20px;
+    }
+}
+
+.timeLabel {
+    display: block;
+
+    &.rest {
+        margin-top: 25px;
+    }
+}
+
+.timeInput {
+    font-size: 1.6rem;
+    width: 50px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.button {
+    display: inline-block;
+    margin: 25px auto;
+    padding: 10px;
+    line-height: normal;
+    border-radius: 4px;
+
+    &.playPause {
+        margin-right: 10px;
+    }
+
+    &.reset {
+
+    }
+}
+
+.timerLabel {
+    margin-top: 0;
+    opacity: 0;
+}
+
+.clock {
+    font-size: 4rem;
+    line-height: normal;
+    margin: 15px 0 0 0;
+}
+
+.tomato {
+    background-image: url('../img/tomato.png');
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    line-height: 2.8;
+    text-shadow: 1px 1px 2px #000;
+}
