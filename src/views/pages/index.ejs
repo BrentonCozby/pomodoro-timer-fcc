@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Home'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header role="banner">
+        <nav role="navigation"></nav>
+    </header>
+
+    <main role="main" class="main-container">
+        <div id="app" class="app">
+            <form id="form">
+                <fieldset class="fieldset work">
+                    <label for="workTime" class="timeLabel work">Work</label>
+                    <input id="workInput" type="number" value="25" min="1" max="99" required="" class="timeInput" />
+                </fieldset>
+                <fieldset class="fieldset rest">
+                    <label for="restTime" class="timeLabel rest">Rest</label>
+                    <input id="restInput" type="number" value="5" min="1" max="99" required="" class="timeInput" />
+                </fieldset>
+                <div class="buttons-row">
+                    <button id="playPause" type="submit" class="button playPause play">
+                        <i id="playPauseIcon" aria-hidden="true" class="fa fa-play"></i>
+                    </button>
+                    <button id="reset" class="button reset">
+                        <i aria-hidden="true" class="fa fa-refresh"></i>
+                    </button>
+                </div>
+            </form>
+            <div id="timer" class="timer">
+                <p id="timerLabel" class="timerLabel">Working</p>
+                <p id="clock" class="clock">0:00:00</p>
+            </div>
+            <div id="completed" class="completed"></div>
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>
